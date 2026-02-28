@@ -1,0 +1,108 @@
+@import "tailwindcss";
+
+/* MonadStrike — Global Styles */
+/* Theme: Dark, techy, green/cyan on black. CS meets cyberpunk. */
+
+@theme {
+  --color-monad-bg: #0a0a0f;
+  --color-monad-panel: #111118;
+  --color-monad-border: #2a2a3a;
+  --color-monad-purple: #836ef9;
+  --color-monad-green: #00ff9d;
+  --color-monad-pending: #f59e0b;
+  --color-monad-confirmed: #10b981;
+  --color-monad-failed: #ef4444;
+  --color-monad-kill: #ff4444;
+  --font-mono: 'JetBrains Mono', 'Space Mono', monospace;
+  --font-ui: 'Inter', system-ui, sans-serif;
+}
+
+/* Base styles */
+body {
+  margin: 0;
+  padding: 0;
+  background-color: var(--color-monad-bg);
+  color: #e0e0e0;
+  font-family: var(--font-ui);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+/* Scrollbar styling */
+::-webkit-scrollbar {
+  width: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--color-monad-bg);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--color-monad-border);
+  border-radius: 3px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--color-monad-purple);
+}
+
+/* Animations */
+@keyframes pulse-glow {
+
+  0%,
+  100% {
+    opacity: 1;
+  }
+
+  50% {
+    opacity: 0.5;
+  }
+}
+
+@keyframes slide-in-right {
+  from {
+    transform: translateX(100%);
+    opacity: 0;
+  }
+
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+@keyframes fade-out {
+  from {
+    opacity: 1;
+  }
+
+  to {
+    opacity: 0;
+  }
+}
+
+.animate-pulse-glow {
+  animation: pulse-glow 2s ease-in-out infinite;
+}
+
+.animate-slide-in {
+  animation: slide-in-right 0.3s ease-out;
+}
+
+.animate-fade-out {
+  animation: fade-out 0.5s ease-out forwards;
+}
+
+@keyframes shimmer {
+  0% {
+    background-position: 200% 0;
+  }
+
+  100% {
+    background-position: -200% 0;
+  }
+}
