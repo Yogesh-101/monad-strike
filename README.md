@@ -1,12 +1,9 @@
 # 🎮 MonadStrike — On-Chain CS Economy Game
 
-![MonadStrike Hero](https://github.com/user-attachments/assets/placeholder-hero-image) <!-- Add a screenshot of your game here -->
-
 **MonadStrike** is a browser-based, Counter-Strike-style web3 top-down shooter that runs fully on the **Monad Testnet**. 
 
 Built to showcase the raw power of Monad's 10,000 TPS parallel execution, MonadStrike integrates a live on-chain economy where every weapon trade, kill bounty, and round settlement is confirmed as a real transaction—all happening instantly without interrupting the high-speed 60FPS gameplay.
 
----
 
 ## 🚀 Features
 
@@ -16,7 +13,6 @@ Built to showcase the raw power of Monad's 10,000 TPS parallel execution, MonadS
 - **Dynamic Batch Settlements**: Kills are buffered and flushed to the blockchain every 10 seconds or at round end using batched transactions.
 - **Live Explorer Feed**: A visual panel tracks the exact real-time transactions hitting Monad, providing an unparalleled demonstration of high throughput.
 
----
 
 ## 🏗️ Architecture Stack
 
@@ -32,7 +28,6 @@ Built to showcase the raw power of Monad's 10,000 TPS parallel execution, MonadS
 - **Monad Testnet**: Utilizing the parallel execution EVM layer.
 - **Hardhat**: Development and deployment pipeline.
 
----
 
 ## ⚙️ Prerequisites
 
@@ -46,7 +41,6 @@ To run this project locally, ensure you have the following installed:
 - **Chain ID**: `10143` (0x279F)
 - **Currency Symbol**: `MON`
 
----
 
 ## 🛠️ Local Setup & Installation
 
@@ -95,7 +89,6 @@ npm run dev
 
 The game should now be running locally at `http://localhost:3001/` (or whichever port Vite provides).
 
----
 
 ## 📖 How to Play
 
@@ -104,7 +97,6 @@ The game should now be running locally at `http://localhost:3001/` (or whichever
 3. **The Game Loop**: Use `WASD` to move and `Mouse` to aim/shoot. Eliminate opponents to earn Kill Bounties.
 4. **Settlement Phase**: Watch the Live Tx Feed pulse as all the economy transactions from the 90-second round hit finality on the Monad chain in mere seconds.
 
----
 
 ## 🛠 Project Structure
 
@@ -123,7 +115,6 @@ monad-strike/
 └── MONAD_CS_BUILD_SPEC.md   # Original Build specifications & deep-dive architecture
 ```
 
----
 
 ## 💸 Smart Contracts deployed by this project
 - **GameEconomy**: Manages deposits, balances, weapon purchases, and orchestrates settlement rewards.
